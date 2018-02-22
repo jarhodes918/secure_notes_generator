@@ -1,0 +1,51 @@
+header, footer {
+ display: block;
+}
+
+#container {
+ width:250px;
+ margin:auto;
+ background-color:#888;
+}
+
+header {
+ background-color:#666;
+}
+
+h2 {
+ color:white;
+ margin:0px;
+ font-size:1.0em;
+}
+
+#footer1 {
+ background-color:#888;
+ text-align:center;
+}
+
+#footer2 {
+ background-color:#999;
+ text-align:center;
+}
+
+#userInput {
+ border-color: yellow;
+}
+
+input[type=radio]
+{
+ width: 15px; 
+ height: 15px;
+}
+
+#subject
+{
+ width:  350px; 
+ height: 20px;
+}
+
+#note
+{
+ width:  350px; 
+ height: 20px;
+}

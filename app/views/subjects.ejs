@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Use the 'title' property to render a page title  -->
+	<title>List Subjects</title>
+</head>
+
+<body>
+	<ul>
+		<% if (notesArray.length > 0) {notesArray.forEach(function(note) {%>
+			<a href="/notes/<%= note.subject%>"><%= note.subject %></a><br>
+			<%})} else {%>There aren't any notes for the current user<%}; %>
+	</ul>
+</body>
+
+</html>
