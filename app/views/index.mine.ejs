@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset=utf-8>
+		<!-- Set title  -->
+		<title><%=title%></title>
+		<style>
+		</style>
+	</head>
+	<body>	
+		<div id="container">
+			<header>
+				<!-- Set header  -->
+				<h1><%=title%></h1>
+				<link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
+			</header>
+			Convert:<br />
+			<!-- Setup form  -->
+			<form action="/index" method="post" id="frm1">
+			<!-- Set table  -->
+			<table>
+				<!-- Set input box  -->
+				<tr><input id="userInput" name="tempVal" type="textbox" value="<%=lastTemp%>"></input><tr>
+				<tr><td>From</td><td>To</td></tr>
+				<!-- Setup check boxes  -->
+				<tr>
+					<td><input style="display:inline; padding:0px;" name="fromType" type="radio" value="Celsius" <%=Cfrom%>>Celsius</input></td>
+					<td><input style="display:inline; padding:0px;" name="toType" type="radio" value="Celsius" <%=Cto%>>Celsius</input> <br /></td>
+				</tr>
+				<tr>
+					<td><input style="display:inline; padding:0px;" name="fromType" type="radio" value="Fahrenheit" <%=Ffrom%>>Fahrenheit</input></td>
+					<td><input style="display:inline; padding:0px;" name="toType" type="radio" value="Fahrenheit" <%=Fto%>>Fahrenheit</input><br /></td>
+				</tr>
+				<tr>
+					<td><input style="display:inline; padding:0px;" name="fromType" type="radio" value="Kelvin" <%=Kfrom%>>Kelvin</input></td>
+					<td><input style="display:inline; padding:0px;" name="toType" type="radio" value="Kelvin" <%=Kto%>>Kelvin</input><br /></td>
+				</tr>
+				<tr>
+					<td><input style="display:inline; padding:0px;" name="fromType" type="radio" value="Rankine" <%=Rfrom%>>Rankine</input></td>
+					<td><input style="display:inline; padding:0px;" name="toType" type="radio" value="Rankine" <%=Rto%>>Rankine</input><br /></td>
+				</tr>
+				<!-- Setup form submit input  -->
+				<tr>
+					<td><input width="100px" type="submit" name="bSubmit" id="bSubmit" value="Convert"><br /><td>
+				</tr>
+			</table>
+			</form>
+			<!-- Setup footer1  -->
+			<footer id="footer1">
+			 <p><%=calcAnswer%></p>
+			</footer>
+			<!-- Setup footer2  -->
+			<footer id="footer2">
+			 <p><%=calcFormula%></p>
+			</footer>
+		</div>
+	</body>
+</html>

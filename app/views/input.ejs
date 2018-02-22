@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="scripts/functions.js"/></script>
+		<link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
+		<title>Notes Manager</title>
+	</head>
+	<body>
+		<h1>Notes Manager Screen</h1>
+
+		<form method="post" action="/input">
+			<label>Please enter a subject and a note to add or just a subject to delete:</label><br><br>
+			<input type="textbox" id="subject" name="subject" placeholder="Please enter a subject:" required><br><br>
+			<input type="textbox" id="note" name="note" placeholder="Please enter a note:" required><br><br>
+			<input type="button" value="Add note" onclick="addnote()">
+			<input type="button" value="Delete note" onclick="deletenote()">
+		</form>
+		<!-- Setup footer1  -->
+		<footer id="footer1">
+			 <p><%=result%></p>
+		</footer>
+	</body>
+</html>
