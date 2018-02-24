@@ -45,9 +45,9 @@ exports.update = function(req,res,next) {
 
 // Create list function
 exports.list = function(req,res,next) {
-	console.log("in list: " + req.session.username)
+	console.log("in list: " + req.user.username)
 	
-	Note.find({author : req.session.username},function(err,notes) {
+	Note.find({author : req.user.username},function(err,notes) {
 		if (err) {
 			return next(err);
 		} else  {
@@ -65,7 +65,7 @@ exports.read = function(req,res) {
 exports.noteBySubject = function(req,res,next,sbt) {
 	Note.findOne({
 		subject : sbt,
-		author : req.session.username
+		author : req.user.username
 	},function(err,note) {
 		if (err) {
 			return next(err);
@@ -82,7 +82,7 @@ exports.create = function(req,res,next) {
 	// Create note
 	var note = new Note(req.body);
 		
-	note.author = req.session.username;
+	note.author = req.user.username;
 	
 	note.save(function(err) {
 		if (err) {
